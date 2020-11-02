@@ -1,0 +1,44 @@
+
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  /* Clear floats after the columns taken from w3 schools*/
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  h1 {
+    font-family: 'Lora', serif;
+  }
+
+  h3 {
+    font-family: 'Merriweather', serif;
+  }
+
+  p {
+    font-family: 'Merriweather', serif;
+  }
+
+  a:link {
+    color: #192387;
+  }
+  
+
+  a:visited {
+    color: #192387;
+  }
+  
+  a:hover {
+    color: #ae0923;
+  }
+  
+  a:active {
+    color: #ae0923;
+  }

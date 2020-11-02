@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vets in Tech | Silent Auction</title>
+    <meta name="description" content="Vets In Tech Silent Auction ">
+    <link rel="stylesheet" href="./assignment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="https://vit.s3-us-west-2.amazonaws.com/images/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <center><a href="https://vetsintech.co/"><img src="https://vit.s3-us-west-2.amazonaws.com/images/vit_logo.jpg"></a></center>
+    <div class="row" style="background-color: black; height: 8px;">
+    </div>
+    <div class="row" style="background-color: white;">
+        <center><h1>Silent Auction</h1></center>
+     </div>
+     <div class="row" style="background-color: black; height: 8px;"> 
+     </div>
+     <div class="row" style="background-color: white;">
+        <center><h3>Join us for the annual VetsInTech Silent Auction</h3>
+        <p>Date: XX/XX/XXXX | 00:00PM PST</p>
+        <p>Bidding Starts In:</p>
+            <!-- Display the countdown timer in an element -->
+                    <p id="demo"></p>
+
+                    <script>
+                    // Set the date we're counting down to
+                    var countDownDate = new Date("Nov 10, 2020 00:00:00").getTime();
+
+                    // Update the count down every 1 second
+                    var x = setInterval(function() {
+
+                    // Get today's date and time
+                    var now = new Date().getTime();
+
+                    // Find the distance between now and the count down date
+                    var distance = countDownDate - now;
+
+                    // Time calculations for days, hours, minutes and seconds
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    // Display the result in the element with id="demo"
+                    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                    + minutes + "m " + seconds + "s ";
+
+                    // If the count down is finished, write some text
+                    if (distance < 0) {
+                        clearInterval(x);
+                        document.getElementById("demo").innerHTML = "EXPIRED";
+                    }
+                    }, 1000);
+                    </script>
+     </div>
+     <div class="row" style="background-color: black; height: 8px;">
+     </div>
+    </div>
+    <div class="row" style="text-align: center;"><h3>Proudly Supporting Veterans From:</h3>
+    </div>
+    <div class="row">
+      <div class="column">
+        <center>
+       <img src="https://www.hqmc.marines.mil/portals/134/Mixed%20Media/EGA%203.jpg" width=250px;>
+        </center>
+      </div>
+      <div class="column">
+        <center>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Emblem_of_the_United_States_Navy.svg/1200px-Emblem_of_the_United_States_Navy.svg.png" width=250px;>
+             </center>
+             <br />
+             
+             <center>
+                <img src="https://cdn.shopify.com/s/files/1/0642/7853/products/bp0744_us_air_force_w_seal_grande.jpeg?v=1602531145" width=250px;>
+                 </center>
+      </div>
+      <div class="column">
+        <center>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/71%2BMrzDspoL._AC_SL1001_.jpg" width=250px;>
+             </center>
+      </div>
+    </div>
+    <div class="row" style="background-color: black; height: 8px;">
+     </div>
+     <div class="row" style="background-color: white;">
+        <center>
+            <h3>Get Started</h3>
+            <div class="typeform-widget" data-url="https://form.typeform.com/to/R6p5riOL" data-transparency="50" data-hide-headers=true data-hide-footer=true style="width: 50%; height: 400px;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script> <div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;"> powered by <a href="https://admin.typeform.com/signup?utm_campaign=R6p5riOL&utm_source=typeform.com-01D93N746SN4HQ9X4KTCTP20D9-professional&utm_medium=typeform&utm_content=typeform-embedded-poweredbytypeform&utm_term=EN" style="color: #999" target="_blank">Typeform</a> </div>
+            <br />
+            <br />
+            <br />
+            <img src="https://media.giphy.com/media/RfSTDk1BewjP8sfr2O/giphy.gif" width="150px">
+            <h3>Contact Us</h3>
+            <p><i class="fa fa-phone"></i> 123-456-7891 | <i class="fa fa-envelope"></i> <a href=mailto:john.smith@google.com>john.smith@google.com</a></p>
+            <p><a href="https://goo.gl/maps/GREyEEza4UQ1jCcK9">1775 Army Navy Street</p>
+            <p>Marine Corps, Air Force, USA 01230</p></a>
+        </center>
+     </div>
+     <div class="row" style="background-color: black; height: 8px;">
+     </div>
+     <div class="row" style="background-color: white;">
+        <center><h3>Stay Up to Date! Follow Us On Social</h3>
+            <p><a href="https://www.facebook.com"><i class="fa fa-facebook" style="font-size:48px;"></i></a>  &nbsp; &nbsp; <a href="https://www.instagram.com"><i class="fa fa-instagram" style="font-size:48px;"></i></a>&nbsp; &nbsp; <a href="https://www.twitter.com"><i class="fa fa-twitter" style="font-size:48px;"></i></a></p>
+        </center>
+     </div>
+     <center>
+         <h3>Get Motivated With Some Music</h3>
+     <iframe width="20%" height="80" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/426986685&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/johnphilipsousa" title="John Philip Sousa" target="_blank" style="color: #cccccc; text-decoration: none;">John Philip Sousa</a> · <a href="https://soundcloud.com/johnphilipsousa/the-marine-corps-hymn" title="The Marine Corps Hymn" target="_blank" style="color: #cccccc; text-decoration: none;">The Marine Corps Hymn</a></div>
+     </center>
+    <div class="row" style="background-color: black; height: 8px;"></div>
+    <div class="row" style="background-color: white; height: 8px;"></div>
+    <div class="row"><h1>Tri Fold Version</h1></div>
+    <div class="column"><center><h3>Follow Us On Social Media</h3>
+        <p><a href="https://www.facebook.com"><i class="fa fa-facebook" style="font-size:48px;"></i></a>  &nbsp; &nbsp; <a href="https://www.instagram.com"><i class="fa fa-instagram" style="font-size:48px;"></i></a>&nbsp; &nbsp; <a href="https://www.twitter.com"><i class="fa fa-twitter" style="font-size:48px;"></i></a></p></center></div>
+    <div class="column"><center><h3>Contact Us</h3>
+        <p><i class="fa fa-phone"></i> 123-456-7891 | <i class="fa fa-envelope"></i> <a href=mailto:john.smith@google.com>john.smith@google.com</a></p>
+        <p><a href="https://goo.gl/maps/GREyEEza4UQ1jCcK9">1775 Army Navy Street</p>
+        <p>Marine Corps, Air Force, USA 01230</p></a></div>
+    <div class="column"><center><h3>Silent Auction</h3>
+        <p>Date: XX/XX/XXXX | 00:00PM PST</p></center></div>
+    
+    </div>
+</body>
+</html>
