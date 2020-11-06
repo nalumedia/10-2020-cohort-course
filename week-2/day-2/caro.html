@@ -3,11 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>- Carousel -</title>
+    <title>Slidey Slider</title>
+        <style>
+            /* The animation code */
+        @keyframes example {
+        from {transform: translateX(0px);}
+        to {transform: translateX(-1995px);}
+        }
+
+        /* The element to apply the animation to */
+        #imageSlider {
+        animation-name: example;
+        animation-duration: 12s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        }
+
+        @keyframes next {
+        from {transform: translateX(0px);}
+        to {transform: translateY(-1323px);}
+        }
+
+        /* The element to apply the animation to */
+        #nextimageSlider {
+        animation-name: next;
+        animation-duration: 12s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        }
+
+        
+
+        </style>
 </head>
 <body>
-<div id="window" style="background-color: aqua; "
+    <div style="display: flex;"><img src="https://static1.squarespace.com/static/586f3cd5893fc0e2398a18e7/t/5e978c0d83c21801ce1b3df2/1604552842989/?format=1500w"></div>
+    <div id="header" style="display: flex; width: 100%; background-color: grey;"><h1>123 Main Street</h1></div>
+    <div id="space" style="display: flex; justify-content: space-around; height: 100px;">
+        <div style="display: flex-item; padding-top: 30px;">Price</div>
+        <div style="display: flex-item; padding-top: 30px;">Square Feet</div>
+        <div style="display: flex-item; padding-top: 30px;">Style</div>
+    </div>
 
-    
+
+    <div id="window" style="background-color: aqua; width: 665px; height: 441px; margin: 0 auto; overflow: hidden;">
+        <div id="imageSlider" style="display: flex;">
+            <img src="https://images.squarespace-cdn.com/content/v1/586f3cd5893fc0e2398a18e7/1603386515160-NTKGX00OZQNTRFLI6PSA/ke17ZwdGBToddI8pDm48kO3zW48UK3ZGW-a5HfT2g1tZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxp-kd3ZjZkm1A8gRVNoXN90nVavZAdXZSepPwKiodhBPIZQZglrtu88qUe1HQm-yc/16135+Valle+De+Oro2.jpg?format=1500w">
+            <img src="https://images.squarespace-cdn.com/content/v1/586f3cd5893fc0e2398a18e7/1603386516757-4ZXGVVU35BESYBMST7W4/ke17ZwdGBToddI8pDm48kO3zW48UK3ZGW-a5HfT2g1tZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxp-kd3ZjZkm1A8gRVNoXN90nVavZAdXZSepPwKiodhBPIZQZglrtu88qUe1HQm-yc/16135+Valle+De+Oro5.jpg?format=2500w">
+            <img src="https://images.squarespace-cdn.com/content/v1/586f3cd5893fc0e2398a18e7/1603386515067-WNWSDO2QOIFMZWKSGGU1/ke17ZwdGBToddI8pDm48kO3zW48UK3ZGW-a5HfT2g1tZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxp-kd3ZjZkm1A8gRVNoXN90nVavZAdXZSepPwKiodhBPIZQZglrtu88qUe1HQm-yc/16135+Valle+De+Oro1.jpg?format=2500w">
+            <img src="https://images.squarespace-cdn.com/content/v1/586f3cd5893fc0e2398a18e7/1603386527064-MS4OC01W8VX4OJ8J8UAK/ke17ZwdGBToddI8pDm48kO3zW48UK3ZGW-a5HfT2g1tZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxp-kd3ZjZkm1A8gRVNoXN90nVavZAdXZSepPwKiodhBPIZQZglrtu88qUe1HQm-yc/16135+Valle+De+Oro23.jpg?format=2500w">
+        </div>
+    </div>
+    <div id="nextwindow" style="background-color: black; width: 665px; height: 441px; margin: 0 auto; overflow: hidden;">
+        <div id="nextimageSlider" style="display: flex; flex-direction: column;">
+            <div style="display: flex-item"> <img src="https://images.squarespace-cdn.com/content/v1/586f3cd5893fc0e2398a18e7/1603386527064-MS4OC01W8VX4OJ8J8UAK/ke17ZwdGBToddI8pDm48kO3zW48UK3ZGW-a5HfT2g1tZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxp-kd3ZjZkm1A8gRVNoXN90nVavZAdXZSepPwKiodhBPIZQZglrtu88qUe1HQm-yc/16135+Valle+De+Oro23.jpg?format=2500w"></div>
+            <div style="display: flex-item"> <img src="https://images.squarespace-cdn.com/content/v1/586f3cd5893fc0e2398a18e7/1603386515160-NTKGX00OZQNTRFLI6PSA/ke17ZwdGBToddI8pDm48kO3zW48UK3ZGW-a5HfT2g1tZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxp-kd3ZjZkm1A8gRVNoXN90nVavZAdXZSepPwKiodhBPIZQZglrtu88qUe1HQm-yc/16135+Valle+De+Oro2.jpg?format=1500w"></div>
+            <div style="display: flex-item"><img src="https://images.squarespace-cdn.com/content/v1/586f3cd5893fc0e2398a18e7/1603386516757-4ZXGVVU35BESYBMST7W4/ke17ZwdGBToddI8pDm48kO3zW48UK3ZGW-a5HfT2g1tZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxp-kd3ZjZkm1A8gRVNoXN90nVavZAdXZSepPwKiodhBPIZQZglrtu88qUe1HQm-yc/16135+Valle+De+Oro5.jpg?format=2500w"></div>
+            <div style="display: flex-item"><img src="https://images.squarespace-cdn.com/content/v1/586f3cd5893fc0e2398a18e7/1603386515067-WNWSDO2QOIFMZWKSGGU1/ke17ZwdGBToddI8pDm48kO3zW48UK3ZGW-a5HfT2g1tZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxp-kd3ZjZkm1A8gRVNoXN90nVavZAdXZSepPwKiodhBPIZQZglrtu88qUe1HQm-yc/16135+Valle+De+Oro1.jpg?format=2500w"></div>
+           
+        </div>
+    </div>"
+
 </body>
 </html>
