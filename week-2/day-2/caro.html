@@ -6,7 +6,7 @@
     <title>Slidey Slider</title>
         <style>
             /* The animation code */
-        @keyframes example {
+        /* @keyframes example {
         from {transform: translateX(0px);}
         to {transform: translateX(-1995px);}
         }
@@ -18,7 +18,7 @@
         animation-iteration-count: infinite;
         animation-direction: alternate;
         animation-timing-function: linear;
-        }
+        } */
 
         @keyframes next {
         from {transform: translateX(0px);}
@@ -32,22 +32,82 @@
         animation-iteration-count: infinite;
         animation-direction: alternate;
         animation-timing-function: linear;
-        }
-
-        
-
+        }   
         </style>
+<link rel="stylesheet" href="./caro_style.css">
+<link href="https://fonts.googleapis.com/css2?family=Asap&display=swap">
+
 </head>
 <body>
+    <!-- header -->
     <div style="display: flex;"><img src="https://static1.squarespace.com/static/586f3cd5893fc0e2398a18e7/t/5e978c0d83c21801ce1b3df2/1604552842989/?format=1500w"></div>
+    <div id="navigation" style="display: flex; height: 50px; background-color: yellow;">
+        <!-- <ul class="flex-container">
+            <li class="flex-item">1</li>
+            <li class="flex-item">2</li>
+            <li class="flex-item">3</li>
+            <li class="flex-item">4</li>
+            <li class="flex-item">5</li>
+            <li class="flex-item">6</li>
+          </ul>
+     -->
+    
+    </div>
+    
+    <!-- address details -->
     <div id="header" style="display: flex; width: 100%; background-color: grey;"><h1>123 Main Street</h1></div>
-    <div id="space" style="display: flex; justify-content: space-around; height: 100px;">
-        <div style="display: flex-item; padding-top: 30px;">Price</div>
-        <div style="display: flex-item; padding-top: 30px;">Square Feet</div>
-        <div style="display: flex-item; padding-top: 30px;">Style</div>
+    <!-- property details -->
+    <div id="property_info" style="display: flex; justify-content: space-around; height: 100px;">
+        <div style="display: flex-item; padding-top: 30px;"><h3>Price</h3></div>
+        <div style="display: flex-item; padding-top: 30px;"><h3>Square Feet</h3></div>
+        <div style="display: flex-item; padding-top: 30px;"><h3>Style</h3></div>
+    </div>
+    <!-- property details 2x -->
+    <div id="property_details_block" style="display: flex;">
+        <div id="property_description" class="flex-item" style="width: 50%;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum eros tortor. Mauris non lectus suscipit, imperdiet lectus et, porta est. Nunc sit amet gravida massa, nec mollis dolor. Nullam fermentum nibh id odio fringilla sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam maximus egestas velit, ut cursus nisi accumsan a. Praesent mollis nibh eget erat dapibus, at lobortis ante commodo. Praesent volutpat, tellus non egestas congue, leo dolor dignissim diam, quis mollis libero justo eu lorem. Fusce in malesuada nunc. Curabitur magna quam, efficitur sit amet interdum quis, efficitur quis dolor. Phasellus feugiat massa enim, a lacinia mi scelerisque sed. Etiam massa est, pellentesque et eros eu, egestas dignissim erat. Mauris finibus eleifend massa, nec feugiat leo interdum sit amet.</p>
+        </div>
+        <div id="carousel" class="flex-item">
+            This is where the carousel goes
+        </div>
+    </div>
+    <div id="dynamic_carousel" style="display:flex;"">
+        <button onclick="getElementById('imageSlider').style.transform = 'translateX(-650px)'">Move Left </button>
+        <button onclick="getElementById('imageSlider').style.transform = 'translateX(650px)'">Move Right </button>
+        <p id="left_text" onclick="nextImage()">Click to move left</p>
+        <p> | </p>
+        <p id="right_text" onclick="prevImage()">Click to move right</p>
+            
+            <script>
+            var currentPosition = 0;
+            var prevImage = function() {
+                currentPosition = currentPosition + 600;
+                document.getElementById('imageSlider').style.transform = 'translateX(' + currentPosition + 'px)'
+                }
+            </script>
+            <!-- TODO: set timeout, conditional logic that eliminates whitespace -->
+
+            <script>
+            var currentPosition = 0;
+            var nextImage = function() {
+            currentPosition = currentPosition - 600;
+            document.getElementById('imageSlider').style.transform  = 'translateX(' + currentPosition + 'px)'
+                }
+            </script>
+
+            <script>
+            function moveRight() {
+            document.getElementById("imageSlider").style.transform = 'translateX(650px)';
+            document.getElementById("right_text").style.color = "yellow";
+            }
+            </script>
+
+    
+
     </div>
 
 
+    <!-- css flexbox -->
     <div id="window" style="background-color: aqua; width: 665px; height: 441px; margin: 0 auto; overflow: hidden;">
         <div id="imageSlider" style="display: flex;">
             <img src="https://images.squarespace-cdn.com/content/v1/586f3cd5893fc0e2398a18e7/1603386515160-NTKGX00OZQNTRFLI6PSA/ke17ZwdGBToddI8pDm48kO3zW48UK3ZGW-a5HfT2g1tZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxp-kd3ZjZkm1A8gRVNoXN90nVavZAdXZSepPwKiodhBPIZQZglrtu88qUe1HQm-yc/16135+Valle+De+Oro2.jpg?format=1500w">
@@ -56,6 +116,9 @@
             <img src="https://images.squarespace-cdn.com/content/v1/586f3cd5893fc0e2398a18e7/1603386527064-MS4OC01W8VX4OJ8J8UAK/ke17ZwdGBToddI8pDm48kO3zW48UK3ZGW-a5HfT2g1tZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxp-kd3ZjZkm1A8gRVNoXN90nVavZAdXZSepPwKiodhBPIZQZglrtu88qUe1HQm-yc/16135+Valle+De+Oro23.jpg?format=2500w">
         </div>
     </div>
+    <div id="second_spacer" style="display: flex; height: 50px;"></div>
+
+
     <div id="nextwindow" style="background-color: black; width: 665px; height: 441px; margin: 0 auto; overflow: hidden;">
         <div id="nextimageSlider" style="display: flex; flex-direction: column;">
             <div style="display: flex-item"> <img src="https://images.squarespace-cdn.com/content/v1/586f3cd5893fc0e2398a18e7/1603386527064-MS4OC01W8VX4OJ8J8UAK/ke17ZwdGBToddI8pDm48kO3zW48UK3ZGW-a5HfT2g1tZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxp-kd3ZjZkm1A8gRVNoXN90nVavZAdXZSepPwKiodhBPIZQZglrtu88qUe1HQm-yc/16135+Valle+De+Oro23.jpg?format=2500w"></div>
@@ -64,7 +127,9 @@
             <div style="display: flex-item"><img src="https://images.squarespace-cdn.com/content/v1/586f3cd5893fc0e2398a18e7/1603386515067-WNWSDO2QOIFMZWKSGGU1/ke17ZwdGBToddI8pDm48kO3zW48UK3ZGW-a5HfT2g1tZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxp-kd3ZjZkm1A8gRVNoXN90nVavZAdXZSepPwKiodhBPIZQZglrtu88qUe1HQm-yc/16135+Valle+De+Oro1.jpg?format=2500w"></div>
            
         </div>
-    </div>"
+    </div>
+
+    <div id="footer" style="display: flex; background-color:purple; height: 50px;"></div>
 
 </body>
 </html>
