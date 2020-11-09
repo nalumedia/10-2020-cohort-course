@@ -4,10 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ryan Dranginis - Slider</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@300&display=swap" rel="stylesheet">
+    <style>
+        @keyframes slider {
+        from {transform: translateX(0px);}
+        to {transform: translateX(-1995px);}
+        }
+        /* The element to apply the animation to */
+        #imageSlider {
+        animation-name: slider;
+        animation-duration: 12s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        }   
+    </style>
 </head>
 <body>
-    
+    <div id="header"><img src="https://vit.s3-us-west-2.amazonaws.com/images/vit_logo.jpg"></div>
+    <div id="css_caro">
+        <div class="flex-item"></div>
+        <div class="flex-item">
+            <h1>This is a slider powered by CSS &#9889;</h1>
+            <!-- CSS Slider -->
+            <div id="window" style="background-color: aqua; width: 665px; height: 441px; margin: 0 auto; overflow: hidden;">
+                <div id="imageSlider" style="display: flex;">
+                    <img src="https://images.squarespace-cdn.com/content/v1/586f3cd5893fc0e2398a18e7/1603386515160-NTKGX00OZQNTRFLI6PSA/ke17ZwdGBToddI8pDm48kO3zW48UK3ZGW-a5HfT2g1tZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxp-kd3ZjZkm1A8gRVNoXN90nVavZAdXZSepPwKiodhBPIZQZglrtu88qUe1HQm-yc/16135+Valle+De+Oro2.jpg?format=1500w">
+                    <img src="https://images.squarespace-cdn.com/content/v1/586f3cd5893fc0e2398a18e7/1603386516757-4ZXGVVU35BESYBMST7W4/ke17ZwdGBToddI8pDm48kO3zW48UK3ZGW-a5HfT2g1tZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxp-kd3ZjZkm1A8gRVNoXN90nVavZAdXZSepPwKiodhBPIZQZglrtu88qUe1HQm-yc/16135+Valle+De+Oro5.jpg?format=2500w">
+                    <img src="https://images.squarespace-cdn.com/content/v1/586f3cd5893fc0e2398a18e7/1603386515067-WNWSDO2QOIFMZWKSGGU1/ke17ZwdGBToddI8pDm48kO3zW48UK3ZGW-a5HfT2g1tZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxp-kd3ZjZkm1A8gRVNoXN90nVavZAdXZSepPwKiodhBPIZQZglrtu88qUe1HQm-yc/16135+Valle+De+Oro1.jpg?format=2500w">
+                    <img src="https://images.squarespace-cdn.com/content/v1/586f3cd5893fc0e2398a18e7/1603386527064-MS4OC01W8VX4OJ8J8UAK/ke17ZwdGBToddI8pDm48kO3zW48UK3ZGW-a5HfT2g1tZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxp-kd3ZjZkm1A8gRVNoXN90nVavZAdXZSepPwKiodhBPIZQZglrtu88qUe1HQm-yc/16135+Valle+De+Oro23.jpg?format=2500w">
+                </div>
+            </div>
+        </div>
+        <div class="flex-item"></div>
+    </div>
+    <div id="js_caro">
+        <div class="flex-item">
+            <p id="left_text" onclick="nextImage()"><a href="#"><i class="fa fa-arrow-left"></i> Left</a></p>
+        </div>
+        <div class="flex-item">
+            <hr />
+            <h1>And this is a slider powered by Javascript &#10024</h1>
+            <p>Click <a href="#" onclick="nextImage()"><u>left</u></a> or <a href="#" onclick="prevImage()"><u>right</u></a> to cycle through the images.</p>
+            <!-- JS Slider -->
+            <div id="window" style="background-color: aqua; width: 665px; height: 441px; margin: 0 auto; overflow: hidden;">
+                <div id="jsSlider" style="display: flex;">
+                    <img src="https://images.squarespace-cdn.com/content/v1/586f3cd5893fc0e2398a18e7/1603386515160-NTKGX00OZQNTRFLI6PSA/ke17ZwdGBToddI8pDm48kO3zW48UK3ZGW-a5HfT2g1tZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxp-kd3ZjZkm1A8gRVNoXN90nVavZAdXZSepPwKiodhBPIZQZglrtu88qUe1HQm-yc/16135+Valle+De+Oro2.jpg?format=1500w">
+                    <img src="https://images.squarespace-cdn.com/content/v1/586f3cd5893fc0e2398a18e7/1603386516757-4ZXGVVU35BESYBMST7W4/ke17ZwdGBToddI8pDm48kO3zW48UK3ZGW-a5HfT2g1tZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxp-kd3ZjZkm1A8gRVNoXN90nVavZAdXZSepPwKiodhBPIZQZglrtu88qUe1HQm-yc/16135+Valle+De+Oro5.jpg?format=2500w">
+                    <img src="https://images.squarespace-cdn.com/content/v1/586f3cd5893fc0e2398a18e7/1603386515067-WNWSDO2QOIFMZWKSGGU1/ke17ZwdGBToddI8pDm48kO3zW48UK3ZGW-a5HfT2g1tZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxp-kd3ZjZkm1A8gRVNoXN90nVavZAdXZSepPwKiodhBPIZQZglrtu88qUe1HQm-yc/16135+Valle+De+Oro1.jpg?format=2500w">
+                    <img src="https://images.squarespace-cdn.com/content/v1/586f3cd5893fc0e2398a18e7/1603386527064-MS4OC01W8VX4OJ8J8UAK/ke17ZwdGBToddI8pDm48kO3zW48UK3ZGW-a5HfT2g1tZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxp-kd3ZjZkm1A8gRVNoXN90nVavZAdXZSepPwKiodhBPIZQZglrtu88qUe1HQm-yc/16135+Valle+De+Oro23.jpg?format=2500w">
+
+                    <script>
+                    var currentPosition = 0;
+                    var prevImage = function() {
+                        currentPosition = currentPosition + 655;
+                        if (currentPosition < 655) {
+                            document.getElementById('jsSlider').style.transform = 'translateX(' + currentPosition + 'px)'
+                        }
+
+                        }
+                    </script>
+                    <!-- TODO: set timeout, conditional logic that eliminates whitespace -->
+
+                    <script>
+                    var currentPosition = 0;
+                    var nextImage = function() {
+                    currentPosition = currentPosition - 655;
+                    if (currentPosition > -1995) {
+                    document.getElementById('jsSlider').style.transform  = 'translateX(' + currentPosition + 'px)'
+                        }
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="flex-item">
+            <p id="right_text" onclick="prevImage()"><a href="#">Right <i class="fa fa-arrow-right"></i></a></p>
+        </div>
+    </div>
+    <div id="todos">
+        <div class="flex-item"></div>
+        <div class="flex-item">
+           <hr />
+            <h2>&#10067;Here's some #todos / questions</h2>
+            <ul>
+                <li>How to animate the javascript slider with setTimeout?</li>
+                <li>There are random occurances where the javascript slider shows the background, is there a way to output the x value of the click to QA?</li>
+                <li>How would I overlay the "left" and "right" on top of the images?</li>
+                <li>Is a href with the onclick event the best way to make text in a p tag trigger events?</li>
+            </ul>
+        </div>
+        <div class="flex-item"></div>
+    </div>    
+    <div id="footer">
+        <div class="flex-item"></div>
+        <div class="flex-item">
+           <hr /> <center>Coded up by Ryan Dranginis, November 9, 2020.</center></div>
+        <div class="flex-item"></div>
+    </div>    
 
 
 </body>
